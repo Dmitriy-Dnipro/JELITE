@@ -1,0 +1,249 @@
+#modalFormSign {
+    .modal-dialog {
+        max-width: 489px;
+        .modal-content {
+            position: relative;
+            padding: 48px 66px 37px;
+            background : {
+                image: url('../images/common/modal-background-white.png'), url('../images/common/modal-background.jpg');
+                position: top center, center center;
+                repeat: no-repeat, no-repeat;
+                size: contain, cover;
+            }
+
+            @include respond-up-to(sm) {
+                padding: 47px 15px 33px;
+                background-size: 100% 250px, cover;
+            }
+
+            p {
+                &:first-of-type {
+                    color: $border-hover-color;
+                    font : {
+                        family: "Constantia";
+                        weight: 700;
+                        size: 24px;
+                    }
+
+                    margin-bottom: 17px;
+
+                    @include respond-up-to(sm) {
+                        font-size: 24px;
+                        margin-bottom: 3px;
+                    }
+                }
+                &:last-of-type {
+                    font-size: 14px;
+                    font-weight: 300;
+
+                    line-height: 1em;
+
+                    a {
+                        font-weight: 700;
+                        color: $brand-red;
+                        font-size: 16px;
+
+                        line-height: 1em;
+                        margin-left: 5px;
+
+                        @include respond-up-to(sm) {
+                            font-size: 24px;
+                            margin-left: 0;
+
+                            display: block;
+                            line-height: 1.3em;
+                        }
+                    }
+                    
+                    margin-bottom: 106px;
+
+                    @include respond-up-to(sm) {
+                        font-size: 18px;
+                        margin-bottom: 125px;
+                    }
+                }
+            }
+
+            form {
+                .form-group {
+                    margin-bottom: 20px;
+                    
+                    @include respond-up-to(sm) {
+                        margin-bottom: 20px;
+                    }
+                    &:last-of-type{
+                        margin-bottom: 32px;
+                        @include respond-up-to(sm) {
+                            margin-bottom: 40px;
+                        }
+                    }
+        
+                    // @include respond-up-to(sm) {
+                    //     margin-bottom: 15px;
+                    // }
+        
+                    // @include respond-exact(md) {
+                    //     margin-bottom: 30px;
+                    // }
+                    .form-control {
+                        @extend .common-input-styles;
+                        padding: 11px 14px;
+                        font-size: 11px;
+        
+                        @include respond-up-to(sm) {
+                            //padding: 15px;
+                            padding: 12px;
+                            font-size: 14px;
+                        }
+        
+                        @include respond-exact(md) {
+                            padding: 24px 17px;
+                        }
+                    }
+                    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                        color: #a6a6a6;
+                    }
+                    ::-moz-placeholder { /* Firefox 19+ */
+                        color: #a6a6a6;
+                    }
+                    :-ms-input-placeholder { /* IE 10+ */
+                        color: #a6a6a6;
+                    }
+                    :-moz-placeholder { /* Firefox 18- */
+                        color: #a6a6a6;
+                    }
+                    textarea {
+                        @extend .common-input-styles;
+                        //padding: 20px;
+                        width: 100%;
+                        padding: 11px 14px;
+                        font-size: 11px;
+        
+                        @include respond-up-to(sm) {
+                            padding: 12px;
+                            font-size: 14px;
+                        }
+        
+                        @include respond-exact(md) {
+                            padding: 24px 17px;
+                        }
+                    }
+                }
+                button {
+                    width: 160px;
+                    padding: 14px 0;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+#modalFormGreetings {
+    .modal-dialog {
+        .modal-content {
+            padding: 158px 196px 179px;
+            p {
+                &:first-of-type {
+                    color: $border-hover-color;
+                    font : {
+                        family: "Constantia";
+                        weight: 700;
+                        size: 36px;
+                    }
+                }
+                &:last-of-type {
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+.modalCart {
+    .modal-dialog {
+        @include respond-up-to(sm) {
+            max-width: 375px;
+        }
+        @include respond-exact(md) {
+            max-width: 770px;
+        }
+    }
+    .modal-content {
+        padding: 197px 83px 138px;
+        background : {
+            color: $white;
+            position: center top;
+            size: 100% 218px;
+            repeat: no-repeat;
+        }
+
+        @include respond-up-to(sm) {
+            background-size: auto 218px;
+            padding: 197px 75px 110px;
+        }
+
+        @include respond-exact(md) {
+            padding: 180px 155px 125px;
+        }
+
+        p {
+            &:first-of-type {
+                color: $border-hover-color;
+                font : {
+                    size: 48px;
+                    weight: 700;
+                    family: "Constantia";
+                }
+                
+                @include respond-exact(md) {
+                    font-size: 44px;
+                }
+
+                margin-bottom: 30px;
+            }
+            &:last-of-type {
+                font-weight: 300;
+                font-size: 24px;
+                span {
+                    font-size: inherit;
+                    font-weight: 700;
+                }
+
+                @include respond-up-to(sm) {
+                    font-size: 18px;
+                    line-height: 1.4em;
+                }
+
+                @include respond-exact(md) {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+.modal {
+    .modal-dialog {
+        max-width: 829px;
+        .close {
+            position: absolute;
+            top: 36px;
+            right: 36px;
+            opacity: 1;
+
+            font-size: 1rem;
+            text-shadow: none;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            @include respond-up-to(sm) {
+                top: 25px;
+                right: 25px;
+            }
+        }
+    }
+}

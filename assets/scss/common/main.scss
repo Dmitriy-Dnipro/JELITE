@@ -1,0 +1,305 @@
+//@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=cyrillic');
+
+@font-face {
+    font-family: "Constantia";
+    src: url("../../fonts/constan.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ConstantiaBold";
+    src: url("../../fonts/constanb.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+html, body, div, span, p, header, footer, section, h1, h2, h3, h4, h5, h6, ul, li, form, input, textarea, button, a, ol, a:hover, a:focus {
+    font-family: 'Roboto', sans-serif;
+    color: $black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    border: 0;
+}
+
+html {
+    background: #E5E5E5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+*   common styles for all of buttons
+*/
+
+.common-button-styles {
+    background-color: $brand-red;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.45);
+    border-radius: 32px;
+
+    width: 272px;
+    max-width: 100%;
+    padding: 23px 0;
+    //height: 66px;
+
+    color: $white;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+
+    cursor: pointer;
+
+    @include respond-up-to(sm) {
+        font-size: 16px;
+        min-width: 230px;
+        //height: 55px;
+    }
+}
+
+/*
+* common styles for sections headings and subheadings (h2 and p)
+*/
+
+.section-heading {
+    //font-weight: 700;
+    font-size: 42px;
+    font-family: "ConstantiaBold";
+    //text-align: center;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+    @include respond-up-to(sm) {
+        font-size: 22px;
+    }
+    @include respond-exact(md) {
+        font-size: 36px;
+    }
+    @include respond-exact(lg) {
+        font-size: 36px;
+    }
+}
+
+.subheading {
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+
+    margin-bottom: 70px;
+
+    @include respond-up-to(sm) {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    @include respond-exact(md) {
+        font-size: 22px;
+        margin-bottom: 80px;
+    }
+}
+
+/*
+* common styles 4 forms
+*/
+
+.common-input-styles {
+    font-size: 22px;
+    font-weight: 300;
+
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+
+    line-height: 1.45em;
+    color: $black;
+
+    @include respond-up-to(sm) {
+        font-size: 13px;
+    }
+
+    @include respond-exact(md) {
+        font-size: 16px;
+    }
+}
+
+
+//hide if width >= 1024px
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color:#000;
+    opacity: 1;
+    background: rgba(0,0,0,0.2);
+}
+
+.swiper-pagination-bullet-active {
+    color:#fff;
+    background: #007aff;
+}
+
+
+
+/*
+* hide or show elements depending on scroll
+*/
+
+.hide-till-vertical-tablet {
+    @include respond-up-to(sm) {
+        display: none !important;
+    }
+}
+
+.hide-from-vertical-tablet {
+    @include respond-to(sm) {
+        display: none !important;
+    }
+}
+
+.hide-till-horizontal-tablet {
+    @include respond-up-to(md) {
+        display: none !important;
+    }
+}
+
+.hide-from-horizontal-tablet {
+    @include respond-to(md) {
+        display: none !important;
+    }
+}
+
+.hide-till-desktop {
+    @include respond-up-to(lg) {
+        display: none !important;
+    }
+}
+
+.hide-from-desktop {
+    @include respond-to(lg) {
+        display: none !important;
+    }
+}
+
+button {
+    &:focus, &:hover, &:active {
+        outline:none !important;
+    }
+}
+
+/*
+* swiper pagination
+*/
+
+.swiper-pagination, .swiper-pagination-1  {
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+    .swiper-pagination-bullet-active {
+        background-color: $border-hover-color;
+    }
+}
+
+.swiper-button-next, .swiper-button-prev {
+    z-index: 9;
+}
+
+.right-block {
+    @include respond-exact(md) {
+        text-align: right;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.result {
+    text-align: center;
+    color: red;
+}
+
+#recall {
+    display: flex;
+
+    position: fixed;
+    right: 50px;
+    bottom: 45px;
+
+    width: 87px;
+    height: 87px;
+
+    background-color: #D9D9D9;
+    border-radius: 50%;
+
+    svg {
+        margin: auto;
+        width: 58px;
+        height: 58px;
+
+        @include respond-up-to(sm) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @include respond-up-to(sm) {
+        width: 60px;
+        height: 60px;
+
+        right: 15px;
+        bottom: 40px;
+    }
+
+    @include respond-exact(md) {
+        right: 58px;
+        bottom: 64px;
+    }
+
+    z-index: 10;
+
+    &:hover {
+        &:before {
+            transition: .5s all;
+            position: absolute;
+            content: '+380951024278';
+            color: $brand-red;
+            font-size: 20px;
+            font-weight: 700;
+            //padding: 5px;
+            
+            bottom: -26px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include respond-up-to(sm) {
+                font-size: 12px;
+            }
+            
+        }
+    }
+
+    
+
+    a {
+        
+
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateY(-50%);
+    }
+
+}

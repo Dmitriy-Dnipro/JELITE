@@ -1,0 +1,80 @@
+#contacts {
+    padding: 85px 0 55px;
+    background-color: #F3F3F3;
+
+    margin-bottom: 75px;
+
+    @include respond-up-to(sm) {
+        padding: 63px 0 55px;
+    }
+
+    @include respond-exact(md) {
+        padding: 75px 0 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-bottom: 1px;
+        text-transform: none;
+
+        @include respond-up-to(sm) {
+            font-size: 22px;
+        }
+    }
+
+    .subheading {
+        margin-bottom: 40px;
+    }
+
+    form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        
+
+        @include respond-up-to(md) {
+            flex-flow: column wrap;
+            align-items: center;
+        }
+
+        @include respond-to(lg) {
+            padding: 0 75px;
+        }
+
+        .form-group {
+            
+            @include respond-up-to(md) {
+                width: 100%;
+            }
+
+            .form-control {
+                padding: 26.5px 10px;
+                @include respond-exact(md) {
+                    padding: 26.5px 29px;
+                }
+            }
+
+            &:first-of-type, &:nth-of-type(2) {
+                width: 48%;
+                margin-bottom: 16px;
+
+                @include respond-up-to(md) {
+                    margin-bottom: 8px;
+                    width: 100%;
+                }
+            }
+
+            &:nth-of-type(3) {
+                width: 100%;
+                margin-bottom: 24px;
+                @include respond-up-to(md) {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+
+        button {
+            margin: 0 auto;
+        }
+    }
+}

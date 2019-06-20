@@ -1,0 +1,189 @@
+#features {
+    margin-bottom: 35px;
+
+    .subheading {
+        padding: 0 20px;
+    }
+
+    .feature {
+        @include respond-up-to(sm) {
+            max-width: 226px;
+            margin: 0 auto 52px;
+        }
+        @include respond-exact(md) {
+            max-width: 257px;
+            margin: 0 auto 40px;
+        }
+        &:hover {
+            .feature-image {
+                svg {
+                    fill: $brand-red;
+                    .recolor {
+                        fill: $brand-red;
+                        //stroke: $brand-red;
+                        transition: fill 0.25s;
+                    }
+                    .stroke-recolor {
+                        stroke: $brand-red;
+                        transition: stroke 0.25s;
+                    }
+                }
+            }
+        }
+
+        &-image {
+            position: relative;
+            
+            margin: 0 auto;
+            
+            margin-bottom: 30px;
+
+            &-svg-wrapper {
+                position: relative;
+                display: flex;
+                z-index: 2;
+
+                border-radius: 50%;
+                background: $white;
+                width: 152px;
+                height: 152px;
+
+                margin: 0 auto;
+
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.07);
+
+                @include respond-up-to(sm) {
+                    width: 122px;
+                    height: 122px;
+                }
+
+                svg {
+                    margin: auto;
+                    .recolor, .stroke-recolor {
+                        transition: all 0.25s;
+                    }
+                }
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                
+                width: 198px;
+                height: 146px;
+
+                z-index: 1;
+
+                background : {
+                    size: contain;
+                    repeat: no-repeat;
+                    position: center center;
+                    image: url('../images/features/feature-shadow.png');
+                }
+            }
+            
+        }
+        &-name {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 20px;
+            line-height: 1.1em;
+            
+            text-align: center;
+            margin-bottom: 20px;
+
+            @include respond-up-to(sm) {
+                font-size: 16px;
+            }
+
+        }
+        &-arrow-bottom {
+            cursor: pointer;
+            margin: 0 auto 17px;
+
+            width: 21px;
+            height: 11px;
+        }
+        &-description {
+            transition: all 0.3s ease-out;
+            opacity: 0; 
+            max-height: 0;
+            overflow: hidden;
+            &-list {
+                padding-top: 11px;
+                list-style: none;
+                border-top: 0.75px solid $grey;
+                &-element {
+                    position: relative;
+                    padding-left: 20px;
+                    font-weight: 300;
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                    text-align: left;
+                    @include respond-up-to(sm) {
+                        font-size: 16px;
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        display: block;
+
+                        top: 8px;
+                        left: 0;
+
+                        width: 6px;
+                        height: 6px;
+
+                        border-radius: 50%;
+
+                        background-color: $brand-red;
+                    }
+                    span {
+                        font-weight: 700;
+                        font-size: inherit;
+                        color: inherit;
+                    }
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .feature-active {
+        .feature-image {
+            svg {
+                .recolor {
+                    fill: $brand-red;
+                    transition: fill 0.25s;
+                }
+            }
+        }
+        .feature-arrow-bottom {
+            transform: rotate(180deg);
+            path {
+                fill: $brand-red;
+            }
+        }
+        .feature-description {
+            transition: all 0.3s ease-out;
+            opacity: 1;
+            max-height: 350px;
+        }
+    }
+
+    .more-button {
+        display: flex;
+        justify-content: center;
+        button {
+            svg {
+                margin-left: 10px;
+            }
+        }
+    }
+}

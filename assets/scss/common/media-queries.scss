@@ -1,0 +1,50 @@
+@mixin respond-up-to($media) {
+  @if $media == xs {
+    @media only screen and (max-width: 480px) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (max-width: 1023px) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (max-width: 1229px) { @content; }
+  }
+}
+
+
+
+
+@mixin respond-to($media) {
+  @if $media == xs {
+    @media only screen and (min-width: 481px) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (min-width: 1024px) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: 1230px) { @content; }
+  }
+}
+
+
+
+@mixin respond-exact($media) {
+  @if $media == sm {
+    @media only screen and (min-width: 481px) and (max-width: 767px) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (min-width: 768px) and (max-width: 1023px) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: 1024px) and (max-width: 1229px) { @content; }
+  }
+}
+
+
+/* --------- Bootstrap -----------
+Extra small devices Phones (<768px) Small devices Tablets (≥768px)  Medium devices Desktops (≥992px)  Large devices Desktops (≥1200px) */

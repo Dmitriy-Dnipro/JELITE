@@ -1,0 +1,97 @@
+#feed {
+    
+    margin-bottom: 188px;
+
+    @include respond-up-to(sm) {
+        margin-bottom: 77px;
+    }
+
+    @include respond-exact(md) {
+        margin-bottom: 111px;
+    }
+
+    h2 {
+        position: relative;
+        padding-top: 73px;
+
+        @include respond-up-to(sm) {
+            padding-top: 51px;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+
+            width: 26px;
+            height: 26px;
+
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            background : {
+                repeat: no-repeat;
+                position: center center;
+                size: contain;
+                image: url('../images/feed/instagram.svg');
+            }
+        }
+    }
+
+    .subheading {
+        @include respond-up-to(md) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .instagram-feed {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        margin-bottom: 91px;
+
+        @include respond-up-to(sm) {
+            margin-bottom: 43px;
+        }
+
+        @include respond-up-to(md) {
+            justify-content: space-around;
+        }
+        
+        @include respond-exact(md) {
+            margin-bottom: 44px;
+        }
+
+        img {
+            @include respond-up-to(sm) {
+                max-width: 144px;
+                height: 144px;
+                &:first-of-type {
+                    margin-bottom: 23px;
+                }
+            }
+            @include respond-exact(md) {
+                &:first-of-type, &:nth-of-type(2) {
+                    margin-bottom: 65px;
+                }
+            }
+
+            @include respond-exact(lg) {
+                max-width: 240px;
+            }
+        }
+    }
+
+    .link-text {
+        font-size: 22px;
+        @include respond-up-to(sm) {
+            font-size: 16px;
+        }
+        a {
+            font-size: inherit;
+            color: $border-hover-color;
+        }
+    }
+}

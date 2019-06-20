@@ -1,0 +1,110 @@
+#intro {
+    min-height: 977px;
+    position: relative;
+    overflow: hidden;
+
+    background : {
+        size: cover;
+        repeat: no-repeat;
+        position: center center;
+    }
+
+    margin-bottom: 60px;
+
+    @include respond-up-to(sm) {
+        padding-bottom: 195px;
+        margin-bottom: 30px;
+    }
+    @include respond-up-to(md) {
+        min-height: auto;
+    }
+    @include respond-exact(md) {
+        padding-bottom: 300px;
+    }
+
+    .wavy, .mobile-wavy {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .wavy {
+        @include respond-up-to(sm) {
+            display: none;
+        }
+    }
+
+    .mobile-wavy {
+        @include respond-to(sm) {
+            display: none;
+        }
+    }
+
+    h1 {
+        font-weight: 900;
+        font-size: 82px;
+        line-height: 1.05em;
+        letter-spacing: -0.03em;
+
+        color: $white;
+        text-shadow: 0px 4.14786px 4.14786px rgba(0, 0, 0, 0.25), 0px 4.84253px 4.84253px rgba(0, 0, 0, 0.24);
+
+        margin: 392px auto 54px;
+        span {
+            font-size: inherit;
+            color: inherit;
+            font-weight: inherit;
+        }
+
+        @include respond-up-to(sm) {
+            font-size: 33px;
+            margin: 294px 0 26px; 
+            span {
+                text-transform: uppercase;
+            }
+        }
+
+        @include respond-exact(md) {
+            font-size: 60px;
+            margin: 461px 0 45px;
+            span {
+                font-size: 72px;
+            }
+        }
+
+        @include respond-up-to(md) {
+            letter-spacing: 0;
+        }
+    }
+
+    button {
+        margin: 0 auto;
+    }
+
+    .wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        min-height: 316px;
+        background : {
+            size: 100% auto;
+            repeat: no-repeat;
+            position: center bottom;
+        }
+
+        @include respond-exact(lg) {
+            top: -45px;
+        }
+        @include respond-up-to(md) {
+            min-height: 316px;
+            background-size: cover;
+            background-position: center bottom;
+        }
+        @include respond-up-to(sm) {
+            min-height: 208px;
+        }
+    }
+
+}

@@ -1,0 +1,35 @@
+#greetings {
+    min-height: 100vh;
+    display: flex;
+    .text-wrapper {
+        margin: auto;
+        text-align: center;
+        svg {
+            margin-bottom: 42px;
+        }
+        p {
+            &:first-of-type {
+                font-family: Constantia;
+                font-size: 40px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+
+                color: #454545;
+                margin-bottom: 15px;
+            }
+            &:last-of-type {
+                font-weight: 300;
+                font-size: 20px;
+                color: #A0A0A0;
+            }
+            a {
+                display: table;
+                margin: 20px auto;
+                background-color: white;
+                padding: 10px;
+                border-radius: 25px;
+                color: #454545;
+            }
+        }
+    }
+}

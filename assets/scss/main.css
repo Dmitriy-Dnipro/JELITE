@@ -1,0 +1,21 @@
+@import "common/media-queries.scss";
+@import "common/variables.scss";
+@import "common/main.scss";
+@import "common/modal.scss";
+@import "common/header.scss";
+@import "common/footer.scss";
+
+@import "advantages/advantages.scss";
+@import "backgrounds/backgrounds.scss";
+@import "box/box.scss";
+@import "contacts/contacts.scss";
+@import "decision/decision.scss";
+@import "intro/intro.scss";
+@import "features/features.scss";
+@import "feed/feed.scss";
+@import "greetings/greetings.scss";
+@import "order/order.scss";
+@import "partners/partners.scss";
+@import "privacy/privacy.scss";
+@import "sign/sign.scss";
+@import "tastes/tastes.scss";

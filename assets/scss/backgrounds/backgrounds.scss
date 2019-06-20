@@ -1,0 +1,87 @@
+.webp {
+    #intro {
+        background-image: url('../images/intro/introBackground.webp');
+        @include respond-up-to(sm) {
+            background-image: url('../images/intro/introBackgroundMobile.webp');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/intro/introBackgroundIpad.webp');
+        }
+        .wave {
+            background-image: url('../images/common/headerBackground.webp');
+            @include respond-up-to(sm) {
+                background-image: url('../images/common/headerBackgroundMobile.webp');
+            }
+            @include respond-exact(md) {
+                background-image: url('../images/common/headerBackgroundIpad.webp');
+            }
+        }
+    }
+    #tastes{
+        background-image: url('../images/tastes/tastesBackground.webp');
+        @include respond-up-to(sm) {
+            background-image: url('../images/tastes/tastesBackgroundMobile.webp');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/tastes/tastesBackgroundIpad.webp');
+        }
+    }
+    #order {
+        background-image: url('../images/tastes/orderBackground.webp');
+        @include respond-up-to(sm) {
+            background-image: url('../images/tastes/tastesBackgroundMobile.webp');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/tastes/tastesBackgroundIpad.webp');
+        }
+    }
+    #modalFormFullCart, #modalFormNotFullCart {
+        .modal-content {
+            background-image: url('../images/common/modalBackground.webp');
+        }
+    }
+}
+
+.no-webp {
+    #intro {
+        background-image: url('../images/intro/introBackground.jpg');
+        @include respond-up-to(sm) {
+            background-image: url('../images/intro/introBackgroundMobile.jpg');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/intro/introBackgroundIpad.jpg');
+        }
+        .wave {
+            background-image: url('../images/common/headerBackground.png');
+            @include respond-up-to(sm) {
+                background-image: url('../images/common/headerBackgroundMobile.png');
+            }
+            @include respond-exact(md) {
+                background-image: url('../images/common/headerBackgroundIpad.png');
+            }
+        }
+    }
+    #tastes {
+        background-image: url('../images/tastes/tastesBackground.jpg');
+        @include respond-up-to(sm) {
+            background-image: url('../images/tastes/tastesBackgroundMobile.jpg');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/tastes/tastesBackgroundIpad.jpg');
+        }
+    }
+    #order {
+        background-image: url('../images/tastes/orderBackground.jpg');
+        @include respond-up-to(sm) {
+            background-image: url('../images/tastes/tastesBackgroundMobile.jpg');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/tastes/tastesBackgroundIpad.jpg');
+        }
+    }
+    #modalFormFullCart, #modalFormNotFullCart {
+        .modal-content {
+            background-image: url('../images/common/modalBackground.png');
+        }
+    }
+}
